@@ -1,0 +1,98 @@
+:root {
+    --color-dark: #1b2132;
+    --color-white: #fff;
+    --color-light: #0fca98;
+}
+
+@media (max-width: 990px) {
+    html {
+        font-size: 57%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: initial;
+    }
+    .navbar-section {
+        padding: 2rem;
+    }
+    .navbar-section .navbar-brand img{
+        width: 15rem;
+    }
+    .nav {
+        position: absolute;
+        top: -55rem; left: 0;
+        width: 100%;
+    }
+    .nav a{
+        display: block;
+        flex-direction: column;
+        margin: 2rem;
+        margin-left: 4rem;
+        padding: 1rem 2rem;
+        border-radius: 0.3rem;
+        color: black;
+    }
+
+    .nav.active {
+        top: 6rem;
+        background-color: var(--color-dark);
+        flex-direction: column;
+    }
+    /* CONTACT section */
+    .contact-text p {
+        padding: 2rem;
+    }
+    .contact form {
+        width: 50rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    /* CAROUSEL IMAGE */
+    .caption {
+        top: 40rem;
+    }
+    .caption-heading {
+        font-size: 3rem;
+        margin: 0;
+        padding: 5rem 6rem 0;
+    }
+    /* TESTIMONIALS section */
+    .testimonials h1 {
+        font-size: 3rem;
+    }
+    .testimonial {
+        max-width: 100%;
+        padding: 4rem 0;
+    }
+
+    .testimonial img {
+        max-width: 80px;
+    }
+
+    .testimonial-content p {
+        font-size: 1.4rem;
+    }
+
+    /* CONTACT section */
+    .contact-text h1 {
+        font-size: 2.5rem;
+    }
+    .contact form {
+        width: 40rem;
+    }
+
+    .content-right {
+        text-align: left;
+        margin-top: 1rem;
+    }
+    .social-links a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}

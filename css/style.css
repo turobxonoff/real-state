@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --color-dark: #1b2132;
+  --color-white: #fff;
+  --color-light: #0fca98;
+  --color-light2: #fff;
+  --color-medium: #252c41;
+}
+
+html {
+  font-size: 63%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+  color: var(--color-white);
+  font-weight: bold;
+  font-family: "Ubuntu";
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+}
+
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  color: var(--color-light2);
+}
+
+.transition{ /* transition for diferents class */
+    -webkit-transition:all 250ms linear;
+    -moz-transition:all 250ms linear;
+    -o-transition:all 250ms linear;
+    -ms-transition:all 250ms linear;
+    transition:all 250ms linear;
+}
+
+.center{ /* set in center */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 100%;
+}
+
+.cover-full{ /* object absolute cover full area */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+}
+
+.section-title {
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title::after {
+  content: " ";
+  width: 4rem;
+  height: 0.5rem;
+  background-color: var(--color-light);
+  position: absolute;
+  top: 5.2rem;
+  left: 48%;
+}
+
+/* NAVBAR */
+.navbar-section {
+  position: absolute !important;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbar-section .container {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav a {
+  font-size: 1.7rem;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  color: var(--color-light2);
+}
+
+.nav a:hover {
+  color: var(--color-light);
+}
+
+.fixed {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-dark);
+  z-index: 4;
+}
+
+/* CAROUSEL IMAGE */
+.banner {
+  position: relative;
+}
+
+.banner .owl-theme .item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay-bg {
+  background-color: var(--color-dark);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.item .container {
+  position: relative;
+  width: 100%;
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  left: 0; top: 33rem;
+  transform: translate(0, -50%);
+  z-index: 3;
+  text-align: center;
+}
+
+.caption-heading{
+    font-size: 5rem;
+    padding: 0;
+    color: var(--color-light2);
+    line-height: 1;
+    margin: 10px 0 30px;
+    text-shadow: 0 0 15px #2b2b2b;
+}
+
+.custom-nav {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    height: auto;
+    z-index: 3;
+}
+
+.owl-prev, .owl-next {
+    position: absolute;
+    height: 100px;
+    color: var(--color-light2);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+    font-size: 3em;
+}
+
+.owl-prev {
+    left: 3%;
+}
+
+.owl-next {
+    right: 3%;
+}
+
+
+/* ABOUT section */
+.about p {
+  line-height: 30px;
+  text-transform: none;
+  font-size: 1.7rem;
+  font-weight: 300;
+  letter-spacing: 2;
+}
+
+.about .row {
+  padding-top: 4rem;
+}
+
+.about .col-md-6 {
+  padding: 30px 20px;
+}
+
+.about .about-item {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.about .about-item h4 {
+  font-size: 2rem;
+  margin-left: 6rem;
+}
+
+.about .about-item p {
+  font-size: 1.5rem;
+  margin-left: 6rem;
+}
+
+.about .about-item i {
+  font-size: 3.5rem;
+  position: absolute;
+  color: var(--color-light);
+}
+
+
+/* SERVICES section */
+.services .row {
+  margin-top: 4rem;
+}
+
+.services .box-image {
+  position: relative;
+  height: 55rem;
+  overflow: hidden;
+}
+
+.services .box-image .image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.box-image .shadow{
+    background-color:#000;
+    opacity: .8;
+}
+
+.box-image .desc {
+  text-align: center;
+}
+
+.box-image .desc h4 {
+  font-size: 3rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.box-image .desc button {
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.box-image .desc button:hover {
+  background-color: var(--color-white);
+}
+
+.box-image:hover .image {
+  transform: scale(1.05);
+}
+
+.box-image:hover .shadow {
+  opacity: 0.1;
+}
+
+/* Projects section */
+.projects {
+  margin-top: 4rem;
+}
+
+.projects .projects-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 3rem;
+}
+
+.projects .projects-item{
+  position: relative;
+  height: 35rem;
+  overflow: hidden;
+}
+
+.projects .projects-item .image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.projects-item .shadow {
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.projects-item .desc {
+  text-align: center;
+}
+
+.projects-item .desc h4 {
+  color: var(--color-white);
+  font-size: 2.8rem;
+  padding-bottom: 1.5rem;
+}
+
+.projects-item button {
+  background-color: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+.projects-item button:hover {
+  background-color: var(--color-white);
+}
+
+.projects-item:hover .image {
+  transform: scale(1.1);
+}
+
+.projects-item:hover .shadow {
+  opacity: 0.1;
+}
+
+
+/* TESTIMONIALS section */
+.testimonials {
+  background-image: url('../images/testimonials.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin-top: 8rem;
+  padding: 10rem 0;
+}
+
+.testimonials::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--color-dark);
+  opacity: 0.8;
+}
+
+.testimonials h1 {
+  color: var(--color-white);
+}
+
+.testimonial {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.testimonial img {
+  max-width: 100px;
+  float: left;
+  margin: 5px 2rem 5px 5px;
+}
+
+.testimonial:hover img {
+  transform: scale(1.1);
+}
+
+.testimonial-content  * {
+  color: var(--color-light2);
+}
+
+.testimonial-content {
+  margin-left: 5rem;
+}
+
+.testimonial-content p{
+  font-size: 1.6rem;
+}
+
+.testimonial-content h4 {
+  font-size: 2.5rem;
+}
+
+.testimonial-content h5 {
+  font-size: 2rem;
+}
+
+
+/* CONTACT section */
+.contact .contact-text {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.contact-text h1 {
+  font-size: 3.5rem;
+  color: var(--color-dark);
+}
+
+.contact-text p {
+  font-size: 2rem;
+  text-transform: none;
+  padding: 1.5rem 10rem 2rem;
+}
+
+.contact form {
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.contact form .form-control {
+  font-size: 1.7rem;
+  padding: 1rem 2rem;
+  text-transform: none;
+}
+
+
+/* FOOTER section */
+.footer1 {
+  background-color: var(--color-dark);
+}
+.footer2 {
+  background-color: var(--color-medium);
+}
+.footer * {
+  color: var(--color-light2);
+}
+.foot-col h4 {
+  font-weight: 500;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 1.8em;
+}
+.foot-col h4:after {
+  content: "";
+  width: 20px;
+  height: 4px;
+  background-color: var(--color-light);
+  display: block;
+  position: absolute;
+  top: 32px;
+}
+
+.foot-col p {
+  line-height: 30px;
+  margin-bottom: 5px;
+  font-size: 1.3em;
+}
+.foot-col a:hover {
+  color: var(--color-light);
+}
+.foot-logo {
+  width: auto;
+}
+.foot-bottom-text {
+  font-size: 1.2em;
+}
+.content-right {
+  text-align: right;
+}
+.social-links a {
+  margin-left: 20px;
+}
+.social-links a i {
+  font-size: 2rem;
+}
+.social-links a:hover i {
+  color: var(--color-light);
+}
